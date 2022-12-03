@@ -33,6 +33,7 @@
 </head>
 
 <body>
+   
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -109,6 +110,7 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
+                                            <form action="POST">
                                             <input type="text" class="form-control" id="name" placeholder="Your Name">
                                             <label for="name">Your Name</label>
                                         </div>
@@ -134,6 +136,8 @@
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                                     </div>
+                                </form>>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -142,32 +146,6 @@
             </div>
         </div>
         <!-- Contact End -->
-        <script>
-            //Add event listener to send message button
-           //Add event listener to send message button
-document.getElementById("sendMessageButton").addEventListener("click", function() {
-  //Get values from name, email and message fields
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  
-  //Compose email
-  var emailBody = "Hi IPG team, \n\n" + name + " (" + email + ") has sent you a message:\n\n" + message;
-  
-  //Send email
-  var emailSent = window.location.href = "mailto:influential@team-ipg.com?subject=Message from website&body=" + emailBody;
-  
-  //Show message sent or not
-  if(emailSent) {
-    alert("Your message has been sent!");
-  }
-  else {
-    alert("Oops, something went wrong and your message was not sent. Please try again.");
-  }
-});
-            </script>
-        
-
         <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
